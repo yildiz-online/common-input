@@ -15,8 +15,12 @@
  */
 package be.yildizgames.common.input;
 
-public interface UseAs<F,T>{
+/**
+ * Possible input on the steering wheel.
+ *
+ * @author Grégory Van den Borre
+ */
+public enum SteeringWheelInput {
 
-    T from(F from);
-
+    TURN_LEFT, TURN_RIGHT, ACCELERATE, BREAK, NOTHING
 }

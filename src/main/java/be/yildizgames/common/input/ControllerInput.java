@@ -13,10 +13,53 @@
  *  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
+
 package be.yildizgames.common.input;
 
-public interface UseAs<F,T>{
+/**
+ * Possible input on the controller.
+ *
+ * @author Grégory Van den Borre
+ */
+public enum ControllerInput {
 
-    T from(F from);
+    NOTHING,
 
+    /**
+     * Button 1.
+     */
+    BUTTON1,
+
+    /**
+     * Button 2.
+     */
+    BUTTON2,
+
+    /**
+     * Button 3.
+     */
+    BUTTON3,
+
+    /**
+     * Button 4.
+     */
+    BUTTON4,
+
+    BUTTON_L1,
+
+    BUTTON_R1,
+
+    BUTTON_L2,
+
+    BUTTON_R2,
+
+    /**
+     * Button start.
+     */
+    START,
+
+    /**
+     * Button select.
+     */
+    SELECT;
 }

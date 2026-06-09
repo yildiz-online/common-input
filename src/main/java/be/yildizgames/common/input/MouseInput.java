@@ -15,8 +15,12 @@
  */
 package be.yildizgames.common.input;
 
-public interface UseAs<F,T>{
+/**
+ * Possible input on the mouse.
+ *
+ * @author Grégory Van den Borre
+ */
+public enum MouseInput {
 
-    T from(F from);
-
+    MOVE_LEFT, MOVE_RIGHT, MOVE_UP, MOVE_DOWN, LEFT_BUTTON, MIDDLE_BUTTON, RIGHT_BUTTON, SCROLL_UP, SCROLL_DOWN, NOTHING
 }

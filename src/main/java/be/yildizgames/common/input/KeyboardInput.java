@@ -15,8 +15,97 @@
  */
 package be.yildizgames.common.input;
 
-public interface UseAs<F,T>{
+/**
+ * Possible input on the keyboard.
+ *
+ * @author Grégory Van den Borre
+ */
+public enum KeyboardInput {
 
-    T from(F from);
+    /**
+     * None.
+     */
+    NOTHING,
+
+    /**
+     * Main enter.
+     */
+    ENTER,
+
+    /**
+     * Control.
+     */
+    CTRL,
+
+    /**
+     * Shift, left or right.
+     */
+    SHIFT,
+
+    /**
+     * Escape.
+     */
+    ESC,
+
+    /**
+     * Tabulation.
+     */
+    TAB,
+
+    /**
+     * Arrow up.
+     */
+    UP,
+
+    /**
+     * Arrow down.
+     */
+    DOWN,
+
+    /**
+     * Arrow left.
+     */
+    LEFT,
+
+    /**
+     * Arrow right.
+     */
+    RIGHT,
+    END,
+    INSERT,
+    F1,
+    F2,
+    F3,
+    F4,
+    F5,
+    F6,
+    F7,
+    F8,
+    F9,
+    F10,
+    F11,
+    F12,
+    PRINT_SCREEN,
+    HOME,
+    PAGE_UP,
+    PAGE_DOWN,
+    BREAK,
+    ALT,
+    AT,
+    PAUSE,
+    A,
+    Q,
+    W,
+    E,
+    R,
+    T,
+    Y,
+    U,
+    I,
+    O,
+    P,
+    OPEN_BRACKET,
+    CLOSE_BRACKET,
+    BACK_SLASH, S, D, F, G, H, J, K, L, SEMICOLON, QUOTE, Z, X, C, V, B, N, M, COMMA, PERIOD, SLASH, BACK_QUOTE, DIGIT1, DIGIT2, DIGIT3, DIGIT4, DIGIT5, DIGIT6, DIGIT7, DIGIT8, DIGIT9, DIGIT0, SUBTRACT, EQUALS, SPACE, BACK_SPACE, EXCLAMATION, INTERROGATION, PLUS, MINUS, STAR, AMPERSAND, DOLLAR, DELETE
 
 }
