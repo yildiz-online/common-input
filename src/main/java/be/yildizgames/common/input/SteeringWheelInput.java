@@ -22,5 +22,5 @@ package be.yildizgames.common.input;
  */
 public enum SteeringWheelInput {
 
-    TURN_LEFT, TURN_RIGHT, ACCELERATE, BREAK, NOTHING
+    TURN_LEFT, TURN_RIGHT, ACCELERATE, BRAKE, NOTHING
 }
