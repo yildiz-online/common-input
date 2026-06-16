@@ -45,12 +45,24 @@ public enum ControllerInput {
      */
     BUTTON4,
 
+    /**
+     * Button L1.
+     */
     BUTTON_L1,
 
+    /**
+     * Button R1.
+     */
     BUTTON_R1,
 
+    /**
+     * Button L2.
+     */
     BUTTON_L2,
 
+    /**
+     * Button R2.
+     */
     BUTTON_R2,
 
     /**
@@ -61,5 +73,13 @@ public enum ControllerInput {
     /**
      * Button select.
      */
-    SELECT;
+    SELECT,
+
+    UP,
+
+    LEFT,
+
+    RIGHT,
+
+    DOWN,
 }

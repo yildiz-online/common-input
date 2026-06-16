@@ -15,6 +15,12 @@
  */
 package be.yildizgames.common.input;
 
+/**
+ * Simulate a device, like a keyboard to control the mouse pointer.
+ * @param <F> Real input device.
+ * @param <T> Input device to simulate.
+ * @author Grégory Van den Borre
+ */
 public interface UseAs<F,T>{
 
     T from(F from);

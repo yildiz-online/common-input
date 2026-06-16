@@ -13,42 +13,42 @@
  *  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
+
 package be.yildizgames.common.input;
 
 /**
- * Simulate a mouse with another device.
- * @param <F> Real device to use.
+ * Any device that can receive an input from a user, it can be a controller, a mouse, a keyboard,...
  *
+ * @param <T> State for the device.
  * @author Grégory Van den Borre
  */
-public abstract class UseAsMouse<F> implements UseAs<F, MouseInput> {
+public interface InputDevice<T> {
 
-    @Override
-    public MouseInput from(F from) {
-        if(from == moveLeft()) {
-            return MouseInput.MOVE_LEFT;
-        } else if (from == moveRight()) {
-            return MouseInput.MOVE_RIGHT;
-        } else if (from == moveUp()) {
-            return MouseInput.MOVE_UP;
-        } else if (from == moveDown()) {
-            return MouseInput.MOVE_DOWN;
-        } else if (from == moveLeftButton()) {
-            return MouseInput.LEFT_BUTTON;
-        } else if (from == moveRightButton()) {
-            return MouseInput.RIGHT_BUTTON;
-        } else if (from == moveMiddleButton()) {
-            return MouseInput.MIDDLE_BUTTON;
-        }
-        return MouseInput.NOTHING;
-    }
+    /**
+     * Controller model name.
+     *
+     * @return The name.
+     */
+    String modelName();
 
-    protected abstract F moveLeft();
-    protected abstract F moveRight();
-    protected abstract F moveUp();
-    protected abstract F moveDown();
-    protected abstract F moveLeftButton();
-    protected abstract F moveRightButton();
-    protected abstract F moveMiddleButton();
+    /**
+     * Controller GUID.
+     *
+     * @return The GUID.
+     */
+    String modelGuid();
 
+    /**
+     * Identification of the controller during this session.
+     *
+     * @return The controller id.
+     */
+    int playerId();
+
+    /**
+     * Current state.
+     *
+     * @return The state.
+     */
+    T currentState();
 }
